@@ -1,5 +1,3 @@
-console.log('Client side javascript is loaded')
-
 
 //Below code is used to attach the index.hbs html file so that we can attach it and get the input for location
 
