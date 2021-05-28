@@ -6,6 +6,8 @@ const forecast=require('./utils/forecast')
 
 const app=express()
 
+const port = process.env.PORT || 3000
+
 // Define paths for express config
 const dirpath = path.join(__dirname,'../public')
 const viewspath = path.join(__dirname,'../templates/views')
@@ -112,8 +114,8 @@ app.get('*',(req,res)=>{         // the * sign is used to show th emessage for a
 //app.com/help
 //app.com/about
 
-app.listen(3000, ()=>{                          // to open th esite we need to use (localhost:3000)
-    console.log('server is on port 3000')       //listen is used to start the server
+app.listen(port, ()=>{                          // to open th esite we need to use (localhost:3000)
+    console.log('server is on port 3000' + port)       //listen is used to start the server
 })
        
 
