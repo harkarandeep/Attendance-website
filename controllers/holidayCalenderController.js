@@ -1,4 +1,5 @@
-const HolidayCalander={
-    holidayCalander: ['15th August / Sunday - Independence Day ','10th September / Friday - Ganesh Chaturthi ','2nd October / Saturday - Gandhi Jayanti']
+const attendanceDetails= require('../data/data')
+function holidayCalander(req,res){
+    res.send('HolidayCalander '+ attendanceDetails.holidayCalanderDays)
 }
-module.exports=HolidayCalander
+module.exports.holidayCalander=holidayCalander

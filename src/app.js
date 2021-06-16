@@ -2,10 +2,8 @@ const path=require('path')
 const express=require('express')
 const indexRouter=require('../routes/index')
 const hbs=require('hbs')
-
+const config=require('../config/config')
 const app=express()
-
-const port = process.env.PORT || 3000
 
 
 const dirpath = path.join(__dirname,'../public')
@@ -22,7 +20,7 @@ app.use(express.static(dirpath))
 app.use('/',indexRouter)
 
 
-app.listen(port, ()=>{                          
-    console.log('server is on port ' + port)       
+app.listen(config.server.port, ()=>{                          
+    console.log('server is on port ' + config.server.port)       
 })
        

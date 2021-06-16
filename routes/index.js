@@ -15,37 +15,21 @@ router.get('',(req,res)=>{
 })
 
 router.get('/absentDays',(req,res)=>{
-    res.render('absentDays',{
-        title:'Check number of days you were absent ',
-        name:' Harkarandeep Singh Sidhu',
-        absentDays: absentDaysController.absentDays
-    })
+    
+    absentDaysController.absentDays(req,res)
+
 })
 
 router.get('/absentDetails',(req,res)=>{
-    res.render('absentDetails',{
-        title:'here are your Absent details',
-        name:' Harkarandeep Singh Sidhu',
-        absentDetails: absentDetailsController.absentDetails
-    })
+    absentDetailsController.absentDetails(req,res)
 })
 
 router.get('/leaveBalance',(req,res)=>{
-    
-    res.render('leaveBalance',{
-        title:'Check your leaveBalance Here',
-        name:' Harkarandeep',
-        leaveBalance: leaveBalanceController.leaveBalance
-    })
+    leaveBalanceController.leaveBalance(req,res)
 })
 
 router.get('/holidayCalander',(req,res)=>{   
-    
-    res.render('holidayCalander',{
-        title:'Welcome to Holiday section',
-        name:' Harkarandeep',
-        holidayCalander: holidayCalenderController.holidayCalander
-    })
+    holidayCalenderController.holidayCalander(req,res)
 })
 
 module.exports=router

@@ -1,4 +1,5 @@
-const AbsentDays={
-    absentDays: '9 Days'
+const attendanceDetails= require('../data/data')
+function absentDays(req,res){
+    res.send('Absent Days ' + attendanceDetails.absentDaysCount)
 }
-module.exports=AbsentDays
+module.exports.absentDays=absentDays
